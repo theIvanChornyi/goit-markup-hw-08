@@ -1,0 +1,21 @@
+// Утилиты
+
+@import './utils/common.scss';
+
+// Общие части
+
+@import './components/header';
+@import './components/footer';
+
+// Страница студия
+
+@import './components/modal';
+@import './components/hero';
+@import './components/quality';
+@import './components/product';
+@import './components/team';
+@import './components/clients';
+
+// Страница портфолио
+
+@import './components/examples';

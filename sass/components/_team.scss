@@ -1,0 +1,55 @@
+@import '../utils/variables.scss';
+.team {
+  padding: 60px 0;
+  background-color: $bkg-color;
+  text-align: center;
+}
+// Заголовок
+.team__title {
+  margin-bottom: 30px;
+}
+// Карточка работника
+.card {
+  padding-bottom: 24px;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.card__img {
+  display: block;
+}
+// Описание карточки
+.card__capture {
+  padding-top: 30px;
+  margin-bottom: 16px;
+}
+.card__name {
+  margin-bottom: 10px;
+
+  font-weight: $capture-weight;
+  font-size: 16px;
+  line-height: (19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-color;
+}
+.card__role {
+  font-size: 16px;
+  line-height: (19 / 16);
+  letter-spacing: 0.03em;
+}
+// Спицок соц. сетей работника
+.soc-med-list--card {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.soc-med-list__ico--card {
+  fill: $ico-color;
+}

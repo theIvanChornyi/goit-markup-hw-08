@@ -1,0 +1,42 @@
+@import '../utils/variables.scss';
+.clients {
+  padding: 60px 0;
+}
+
+// Заголовок
+.clients__title {
+  margin-bottom: 30px;
+}
+
+// Логотипы клиентов
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 92px;
+  min-width: calc((100vw - 60px) / 2);
+
+  border: 1px solid $ico-color;
+  border-radius: 4px;
+
+  transition: border-color $hover-time $hover-function;
+  &:hover,
+  &:focus {
+    border-color: $acent-color;
+  }
+}
+.clients__ico {
+  fill: $ico-color;
+  transition: fill $hover-time $hover-function;
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $acent-color;
+  }
+}

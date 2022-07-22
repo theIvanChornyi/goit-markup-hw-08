@@ -1,0 +1,91 @@
+@import '../utils/variables.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+body {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: $text-weight;
+  font-size: 14px;
+  line-height: (24 / 14);
+  letter-spacing: 0.03em;
+  color: $text-color;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.button {
+  padding: 10px 32px;
+
+  font-family: $btn-font;
+  font-style: normal;
+  font-weight: $btn-weight;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: $alternative-color;
+
+  background-color: $acent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+  transition: background-color $hover-time $hover-function;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+}
+.section-title {
+  font-family: $title-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: (33 / 28);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-color;
+}
+.soc-med-list {
+  display: flex;
+  padding-left: 0;
+}
+.soc-med-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}
