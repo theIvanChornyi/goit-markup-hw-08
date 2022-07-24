@@ -1,17 +1,37 @@
 @import '../utils/variables.scss';
 .quality {
   padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
+.quality__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
 .quality__item {
+  text-align: center;
   &:not(:last-child) {
     margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% / 2) - 15px);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
   }
 }
 .quality__thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  // min-width: 450px;
   height: 120px;
 
   background-color: $bkg-color;
@@ -19,7 +39,6 @@
 }
 // Заголовок карточки
 .quality__item-title {
-  // width: 270px;
   margin: 30px auto 0;
 
   font-size: 14px;
@@ -28,7 +47,13 @@
   text-transform: uppercase;
 
   color: $title-color;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 .quality__item-description {
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
   margin-top: 10px;
 }

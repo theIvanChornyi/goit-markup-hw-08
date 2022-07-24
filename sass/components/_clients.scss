@@ -1,11 +1,17 @@
 @import '../utils/variables.scss';
 .clients {
   padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 // Заголовок
 .clients__title {
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 // Логотипы клиентов
@@ -21,7 +27,7 @@
   align-items: center;
 
   min-height: 92px;
-  min-width: calc((100vw - 60px) / 2);
+  width: calc((100vw - 60px) / 2);
 
   border: 1px solid $ico-color;
   border-radius: 4px;
@@ -30,6 +36,12 @@
   &:hover,
   &:focus {
     border-color: $acent-color;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100vw - 90px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
 .clients__ico {

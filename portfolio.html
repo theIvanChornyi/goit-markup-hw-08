@@ -15,32 +15,64 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="header">
     <div class="container">
-      <nav class="nav">
-        <a class="logo header-logo list" lang="en" href="./index.html"><span class="logo__acсent">Web</span>Studio</a>
-        <ul class="nav__list list ">
-          <li class="nav__item"><a class="nav__link list" href="./index.html">Студия</a></li>
-          <li class="nav__item"><a class="nav__link list active" href="./portfolio.html">Портфолио</a></li>
-          <li class="nav__item"><a class="nav__link list" href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      <ul class="contacts list">
-        <li class="contacts__item">
-          <a class="contacts__link list" href="mailto:info@devstudio.com">
-            <svg class="contacts__icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
-        <li class="contacts__item">
-          <a class="contacts__link list" href="tel:+380961111111">
-            <svg class="contacts__icon" width="10" height="16">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11</a>
-        </li>
-      </ul>
+      <div class="header__menu" data-menu>
+        <nav class="nav">
+          <div class="header__buttons">
+            <a class="logo header-logo list" lang="en" href="./index.html"><span
+                class="logo__acсent">Web</span>Studio</a>
+            <button class="header__button" type="button" aria-expanded="true" data-menu-button>
+              <svg class="header__ico" width="40" height="40">
+                <use class="header__ico--close" href="./images/icons.svg#icon-menu-close"></use>
+                <use class="header__ico--menu" href="./images/icons.svg#icon-menu"></use>
+              </svg>
+            </button>
+          </div>
+        </nav>
+        <div class="header__submenu">
+          <ul class="nav__list list ">
+            <li class="nav__item"><a class="nav__link list" href="./index.html">Студия</a></li>
+            <li class="nav__item"><a class="nav__link list active" href="./portfolio.html">Портфолио</a></li>
+            <li class="nav__item"><a class="nav__link list" href="#">Контакты</a></li>
+          </ul>
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a class="contacts__link list" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link list" href="tel:+380961111111">
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+          <ul class="soc-med-list soc-med-list--text list">
+            <li class="soc-med-list__item soc-med-list__item--text list">
+              <a href="https://www.instagram.com/" class="soc-med-list__link--text list" target="_blank"
+                rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li class="soc-med-list__item soc-med-list__item--text list">
+              <a href="https://twitter.com/" class="soc-med-list__link--text list" target="_blank"
+                rel="noopener noreferrer">Twitter</a>
+            </li>
+            <li class="soc-med-list__item soc-med-list__item--text list">
+              <a href="https://www.facebook.com/" class="soc-med-list__link--text list" target="_blank"
+                rel="noopener noreferrer">Facebook</a>
+            </li>
+            <li class="soc-med-list__item soc-med-list__item--text list ">
+              <a href="https://www.linkedin.com/" class="soc-med-list__link--text list" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
     </div>
   </header>
   <main>
@@ -51,30 +83,38 @@
         <Form class="filters">
           <label class="filters__item">
             <input class="filters__input visually-hidden" type="radio" name="product-type" value="all" checked>
-            <div class="filters__button">Все</div>
+            <a class="filters__button">Все</a>
           </label>
           <label class="filters__item">
             <input class="filters__input visually-hidden" type="radio" name="product-type" value="sites">
-            <div class="filters__button">Веб-сайты</div>
+            <a class="filters__button">Веб-сайты</a>
           </label>
           <label class="filters__item">
             <input class="filters__input visually-hidden" type="radio" name="product-type" value="application">
-            <div class="filters__button">Приложения</div>
+            <a class="filters__button">Приложения</a>
           </label>
           <label class="filters__item">
             <input class="filters__input visually-hidden" type="radio" name="product-type" value="design">
-            <div class="filters__button">Дизайн</div>
+            <a class="filters__button">Дизайн</a>
           </label>
           <label class="filters__item">
             <input class="filters__input visually-hidden" type="radio" name="product-type" value="marketing">
-            <div class="filters__button">Маркетинг</div>
+            <a class="filters__button">Маркетинг</a>
           </label>
         </Form>
         <ul class="examples__list list">
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/tech-crack.jpg" alt="Включенный ноутбук" width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/techno-mobile.jpg 450w,
+                  ./images/mobile/techno-mobile@2x.jpg 900w,
+                  ./images/tablet/techno-tablet.jpg 354w,
+                  ./images/tablet/techno-tablet@2x.jpg 708w,
+                  ./images/desktop/techno-desktop.jpg 370w,
+                  ./images/desktop/techno-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/techno-mobile.jpg" alt="Включенный ноутбук" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -91,7 +131,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/basketball.jpg" alt="Баскетболисты играют" width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/new-orlean-mobile.jpg 450w,
+                  ./images/mobile/new-orlean-mobile@2x.jpg 900w,
+                  ./images/tablet/new-orlean-tablet.jpg 354w,
+                  ./images/tablet/new-orlean-tablet@2x.jpg 708w,
+                  ./images/desktop/new-orlean-desktop.jpg 370w,
+                  ./images/desktop/new-orlean-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/new-orlean-mobile.jpg" alt="Баскетболисты играют" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -108,8 +156,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/seafood.jpg" alt="Логотип на котором изображена рыба"
-                  width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/seafood-mobile.jpg 450w,
+                  ./images/mobile/seafood-mobile@2x.jpg 900w,
+                  ./images/tablet/seafood-tablet.jpg 354w,
+                  ./images/tablet/seafood-tablet@2x.jpg 708w,
+                  ./images/desktop/seafood-desktop.jpg 370w,
+                  ./images/desktop/seafood-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/seafood-mobile.jpg" alt="Логотип на котором изображена рыба" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -126,7 +181,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/headphones.jpg" alt="Большие наушники" width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/prime-mobile.jpg 450w,
+                  ./images/mobile/prime-mobile@2x.jpg 900w,
+                  ./images/tablet/prime-tablet.jpg 354w,
+                  ./images/tablet/prime-tablet@2x.jpg 708w,
+                  ./images/desktop/prime-desktop.jpg 370w,
+                  ./images/desktop/prime-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/prime-mobile.jpg" alt="Большие наушники" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -143,8 +206,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/boxes.jpg" alt="Две коробки одна белая другая коричневая"
-                  width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/boxes-mobile.jpg 450w,
+                  ./images/mobile/boxes-mobile@2x.jpg 900w,
+                  ./images/tablet/boxes-tablet.jpg 354w,
+                  ./images/tablet/boxes-tablet@2x.jpg 708w,
+                  ./images/desktop/boxes-desktop.jpg 370w,
+                  ./images/desktop/boxes-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/boxes-mobile.jpg" alt="Две коробки одна белая другая коричневая" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -161,8 +231,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/monitor.jpg" alt="Монитор с открытой вкладкой сайта"
-                  width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/inspiration-mobile.jpg 450w,
+                  ./images/mobile/inspiration-mobile@2x.jpg 900w,
+                  ./images/tablet/inspiration-tablet.jpg 354w,
+                  ./images/tablet/inspiration-tablet@2x.jpg 708w,
+                  ./images/desktop/inspiration-desktop.jpg 370w,
+                  ./images/desktop/inspiration-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/inspiration-mobile.jpg" alt="Монитор с открытой вкладкой сайта" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -179,7 +256,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/book.jpg" alt="Развёрнутая книга" width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/edition-mobile.jpg 450w,
+                  ./images/mobile/edition-mobile@2x.jpg 900w,
+                  ./images/tablet/edition-tablet.jpg 354w,
+                  ./images/tablet/edition-tablet@2x.jpg 708w,
+                  ./images/desktop/edition-desktop.jpg 370w,
+                  ./images/desktop/edition-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/edition-mobile.jpg" alt="Развёрнутая книга" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -196,7 +281,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/lable.jpg" alt="Бирка с названием" width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/lab-mobile.jpg 450w,
+                  ./images/mobile/lab-mobile@2x.jpg 900w,
+                  ./images/tablet/lab-tablet.jpg 354w,
+                  ./images/tablet/lab-tablet@2x.jpg 708w,
+                  ./images/desktop/lab-desktop.jpg 370w,
+                  ./images/desktop/lab-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/lab-mobile.jpg" alt="Бирка с названием" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -213,7 +306,15 @@
           <li class="examples__item">
             <a href="" class="examples__link" target="_blank" rel="noopener noreferrer">
               <div class="examples__card">
-                <img class="examples__img" src="./images/growing.jpg" alt="Человек работает за ноутбуком" width="370">
+                <img class="examples__img" srcset="
+                  ./images/mobile/growing-mobile.jpg 450w,
+                  ./images/mobile/growing-mobile@2x.jpg 900w,
+                  ./images/tablet/growing-tablet.jpg 354w,
+                  ./images/tablet/growing-tablet@2x.jpg 708w,
+                  ./images/desktop/growing-desktop.jpg 370w,
+                  ./images/desktop/growing-desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/mobile/growing-mobile.jpg" alt="Человек работает за ноутбуком" width="370">
                 <div class="examples__description">
                   <p class="examples__text">Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -233,77 +334,81 @@
   </main>
   <footer class="footer list">
     <div class="container">
-      <div class="footer__column">
-        <a class="logo footer-logo list" lang="en" href="./index.html"><span class="logo__acсent">Web</span>Studio</a>
-        <address class="address">
-          <ul class="address__list list">
-            <li class="address__item list">
-              <a class="address__link address__link-located list" href="https://goo.gl/maps/6ziTikTAs9fFtDVV7"
-                target="_blank" rel="noopener noreferrer">
-                г. Киев, пр-т Леси Украинки, 26
+      <div class="row">
+        <div class="footer__column">
+          <a class="logo footer-logo list" lang="en" href="./index.html"><span class="logo__acсent">Web</span>Studio</a>
+          <address class="address">
+            <ul class="address__list list">
+              <li class="address__item list">
+                <a class="address__link address__link-located list" href="https://goo.gl/maps/6ziTikTAs9fFtDVV7"
+                  target="_blank" rel="noopener noreferrer">
+                  г. Киев, пр-т Леси Украинки, 26
+                </a>
+              </li>
+              <li class="address__item"><a class="address__link list" href="tel:+380961111111">+38 096 111 11
+                  11</a></li>
+              <li class="address__item"><a class="address__link list"
+                  href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer__column">
+          <h2 class="footer__title list">присоединяйтесь</h2>
+          <ul class="soc-med-list soc-med-list--dark list">
+            <li class="soc-med-list__item soc-med-list__item--dark list">
+              <a href="https://www.instagram.com/" class="soc-med-list__link soc-med-list__link--dark" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="soc-med-list__ico soc-med-list-ico--dark" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
-            <li class="address__item"><a class="address__link list" href="tel:+380961111111">+38 096 111 11
-                11</a></li>
-            <li class="address__item"><a class="address__link list"
-                href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <li class="soc-med-list__item soc-med-list__item--dark list">
+              <a href="https://twitter.com/" class="soc-med-list__link soc-med-list__link--dark" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="soc-med-list__ico soc-med-list-ico--dark" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc-med-list__item soc-med-list__item--dark list">
+              <a href="https://www.facebook.com/" class="soc-med-list__link soc-med-list__link--dark" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="soc-med-list__ico soc-med-list-ico--dark" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc-med-list__item soc-med-list__item--dark list">
+              <a href="https://www.linkedin.com/" class="soc-med-list__link soc-med-list__link--dark" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="soc-med-list__ico soc-med-list-ico--dark" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
-      </div>
-      <div class="footer__column">
-        <h2 class="footer__title list">присоединяйтесь</h2>
-        <ul class="soc-med-list footer__soc-med-list">
-          <li class="soc-med-list__item list">
-            <a href="https://www.instagram.com/" class="soc-med-list__link footer__soc-med-list-link" target="_blank"
-              rel="noopener noreferrer">
-              <svg class="soc-med-list__ico footer__soc-med-list-ico" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
+        </div>
+        <div class="footer__column">
+          <form name="sign-up" autocomplete="on" method="post">
+            <label class="sign-up__label footer__title">
+              Подпишитесь на рассылку
+              <input class="sign-up__input" name="sign-up-email" type="email" placeholder="E-mail" required>
+            </label>
+            <button class="button sign-up__button" type="submit">Подписаться
+              <svg class="sign-up__ico" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
               </svg>
-            </a>
-          </li>
-          <li class="soc-med-list__item list">
-            <a href="https://twitter.com/" class="soc-med-list__link footer__soc-med-list-link" target="_blank"
-              rel="noopener noreferrer">
-              <svg class="soc-med-list__ico footer__soc-med-list-ico" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="soc-med-list__item list">
-            <a href="https://www.facebook.com/" class="soc-med-list__link footer__soc-med-list-link" target="_blank"
-              rel="noopener noreferrer">
-              <svg class="soc-med-list__ico footer__soc-med-list-ico" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="soc-med-list__item footer__soc-med-list-item">
-            <a href="https://www.linkedin.com/" class="soc-med-list__link footer__soc-med-list-link" target="_blank"
-              rel="noopener noreferrer">
-              <svg class="soc-med-list__ico footer__soc-med-list-ico" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__column">
-        <form name="sign-up" autocomplete="on" method="post">
-          <label class="sign-up__label">
-            Подпишитесь на рассылку
-            <input class="sign-up__input" name="sign-up-email" type="email" placeholder="E-mail">
-          </label>
-          <button class="button sign-up__button" type="submit">Подписаться
-            <svg class="sign-up__ico" width="24" height="24">
-              <use href="./images/icons.svg#icon-telegram"></use>
-            </svg>
-          </button>
-        </form>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
     </address>
   </footer>
+
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

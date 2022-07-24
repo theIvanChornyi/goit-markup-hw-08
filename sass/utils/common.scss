@@ -18,6 +18,11 @@ body {
   letter-spacing: 0.03em;
   color: $text-color;
 }
+
+img {
+  display: block;
+  width: 100%;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -29,7 +34,6 @@ body {
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 .list {
   margin: 0;
@@ -40,6 +44,10 @@ body {
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  min-width: 320px;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 .button {
   padding: 10px 32px;
@@ -77,6 +85,10 @@ body {
   letter-spacing: 0.03em;
 
   color: $title-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
 }
 .soc-med-list {
   display: flex;
@@ -88,4 +100,22 @@ body {
   align-items: center;
   width: 44px;
   height: 44px;
+  @media screen and (min-width: 1200px) {
+    border-radius: 50%;
+    transition: background-color $hover-time $hover-function;
+    &:hover,
+    &:focus {
+      background-color: $acent-color;
+    }
+  }
+}
+
+.soc-med-list__ico {
+  @media screen and (min-width: 1200px) {
+    transition: fill $hover-time $hover-function;
+    .soc-med-list__link:hover &,
+    .soc-med-list__link:focus & {
+      fill: $alternative-color;
+    }
+  }
 }

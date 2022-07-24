@@ -1,3 +1,38 @@
 .product {
-  display: none;
+  padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+.product__section-title {
+  margin-bottom: 50px;
+}
+
+.product__list {
+  display: flex;
+  gap: 30px;
+}
+.product__card {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+.product__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 70px;
+
+  padding: 27px 0;
+
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  background: rgba(47, 48, 58, 0.8);
 }

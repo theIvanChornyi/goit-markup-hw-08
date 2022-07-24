@@ -5,11 +5,45 @@
   text-align: center;
 }
 
-.footer__column {
-  &:not(:last-child) {
-    margin-bottom: 60px;
+.footer .row {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+    column-gap: 0;
   }
 }
+
+.footer__column {
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &:nth-child(2) {
+      padding-top: 5px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:nth-child(1) {
+      margin-right: 70px;
+    }
+    &:nth-child(2) {
+      padding-top: 12px;
+      margin-right: 93px;
+    }
+    &:nth-child(3) {
+      padding-top: 12px;
+      position: relative;
+    }
+  }
+}
+
 // Логотип
 .footer-logo {
   margin: 0 auto 20px;
@@ -18,14 +52,16 @@
   text-align: center;
 
   color: $alternative-color;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 // Ссылки номера/адреса
-.address__link {
-  text-decoration: none;
-  color: inherit;
-}
 .address__item {
   font-style: normal;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
   &:first-child {
     color: $alternative-color;
   }
@@ -33,6 +69,17 @@
     margin-top: 8px;
 
     color: rgba(255, 255, 255, 0.6);
+  }
+}
+.address__link {
+  text-decoration: none;
+  color: inherit;
+  transition: color $hover-time $hover-function;
+  @media screen and (min-width: 1200px) {
+    &:hover,
+    &:focus {
+      color: $acent-color;
+    }
   }
 }
 // Заголовок
@@ -44,6 +91,9 @@
   text-transform: uppercase;
 
   color: $alternative-color;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 // Список соц. сетей
@@ -78,6 +128,10 @@
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
+  @media screen and (min-width: 768px) {
+    min-width: 450px;
+  }
+
   &::placeholder {
     font-family: $main-font;
     font-style: normal;
@@ -88,12 +142,22 @@
 
     color: rgba(255, 255, 255, 0.6);
   }
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+  }
 }
 .sign-up__button {
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media screen and (min-width: 1200px) {
+    max-width: 200px;
+    max-height: 50px;
+    position: absolute;
+    right: -212px;
+    bottom: 40px;
+  }
 }
 .sign-up__ico {
   margin-left: 10px;

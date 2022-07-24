@@ -1,1 +1,189 @@
 @import '../utils/variables.scss';
+// Задний фон
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform $hover-time $hover-function, opacity $hover-time $hover-function;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.2);
+  }
+}
+// Модальное окно
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: calc(100% - 30px);
+  max-width: 450px;
+
+  padding: 40px;
+
+  background-color: $alternative-color;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
+}
+// Кнопка зарыть
+.modal__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
+
+  border-radius: 50%;
+  background-color: $alternative-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.modal__ico {
+  display: block;
+  .modal__close-button:hover &,
+  .modal__close-button:focus & {
+    fill: $acent-color;
+  }
+}
+// Заголовок
+.modal__title {
+  display: block;
+  margin: 0 auto 12px;
+
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-color;
+}
+// Название формы
+.data__label {
+  position: relative;
+  display: block;
+}
+.data__caption {
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 10px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+}
+.data__name-caption {
+  margin-top: 0;
+}
+// Поле ввода формы
+.data__input {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 42px;
+  padding-right: 15px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  &:hover,
+  &:focus-within {
+    outline-color: $acent-color;
+  }
+}
+.data__ico {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  transition: fill $hover-time $hover-function;
+
+  .data__label:hover &,
+  .data__label:focus-within & {
+    fill: $acent-color;
+  }
+}
+.data__coment {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  resize: none;
+
+  &:hover,
+  &:focus-within {
+    outline-color: $acent-color;
+  }
+  &::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.data__terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
+}
+.data__checkbox {
+}
+.data__check-ico {
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  fill: #fff;
+  .data__checkbox:checked + & {
+    background-color: $acent-color;
+    border-color: $acent-color;
+  }
+  .data__checkbox:hover + &,
+  .data__checkbox:focus + & {
+    border-color: $acent-color;
+  }
+}
+.data__terms-text {
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+.data__terms-link {
+  color: $acent-color;
+}
+.data__button {
+  display: block;
+  margin: 30px auto 0;
+  @media screen and (min-width: 768px) {
+    min-width: 200px;
+  }
+}

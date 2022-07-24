@@ -1,0 +1,157 @@
+@import '../utils/variables.scss';
+.examples {
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 90px 0;
+  }
+}
+// Кнопки
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 15px;
+  column-gap: 8px;
+
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.filters__button {
+  padding: 6px 22px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+
+  border-radius: 4px;
+  background: $bkg-color;
+  .filters__input:checked + & {
+    color: $alternative-color;
+    background: $acent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  @media screen and (min-width: 1200px) {
+    transition: color $hover-time $hover-function, background-color $hover-time $hover-function,
+      box-shadow $hover-time $hover-function;
+
+    .filters__input:focus + & {
+      outline: 2px solid black;
+    }
+
+    cursor: pointer;
+    &:hover {
+      color: $alternative-color;
+      background-color: $acent-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+// Карточки
+.examples__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+}
+.examples__item {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    transition: box-shadow $hover-time $hover-function;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+.examples__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.examples__card {
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    overflow: hidden;
+  }
+}
+.examples__img {
+  display: block;
+}
+.examples__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 294px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 24px;
+
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(110%);
+  transition: transform $hover-time $hover-function;
+
+  .examples__item:hover &,
+  .examples__item :focus & {
+    transform: translateY(0);
+  }
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+.examples__text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: $alternative-color;
+}
+.examples__caption {
+  padding: 20px 24px;
+}
+.examples__name {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: $title-color;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 300px;
+  }
+}
+.examples__product {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}
