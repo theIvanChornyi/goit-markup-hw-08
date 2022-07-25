@@ -3,6 +3,7 @@
 .header {
   max-height: 60px;
   position: relative;
+  min-width: 320px;
   &::after {
     content: '';
     position: absolute;
@@ -20,10 +21,13 @@
 }
 .header__buttons {
   @media screen and (max-width: 767px) {
+    min-width: 290px;
+    max-width: 480px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .header__menu.is-open & {
+    .header.is-open & {
       justify-content: flex-end;
     }
   }
@@ -45,7 +49,7 @@
     padding: 0;
   }
   @media screen and (max-width: 767px) {
-    .header__menu.is-open & {
+    .header.is-open & {
       display: none;
     }
   }
@@ -61,7 +65,6 @@
 .header__button {
   display: none;
   @media screen and (max-width: 767px) {
-    position: sticky;
     display: block;
     border: none;
     padding: 10px 0;
@@ -98,27 +101,40 @@
     justify-content: space-between;
   }
 }
-
 // Подменю
+
 .header__submenu {
   @media screen and (max-width: 767px) {
     position: absolute;
-    top: 60px;
+
+    top: 59px;
     left: 0;
     right: 0;
     bottom: 0;
 
     display: block;
-
-    padding: 0 15px 48px 40px;
-
-    min-height: 736px;
+    height: calc(100vh - 60px);
     background-color: #fff;
-    transform: translateY(-110%);
+    transform: translateY(-120%);
     transition: transform $hover-time $hover-function;
-    .header__menu.is-open & {
+    .header.is-open & {
       transform: translateY(0);
     }
+  }
+}
+.header__submenu-container {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 480px;
+    min-width: 320px;
+    height: 100%;
+
+    padding: 0 15px 48px 40px;
+    margin: 0 auto;
+    overflow: scroll;
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -128,7 +144,8 @@
 // Ссылки на страницы
 .nav__list {
   @media screen and (max-width: 767px) {
-    margin-bottom: 302px;
+    // margin-bottom: 302px;
+    flex-grow: 1;
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -152,7 +169,7 @@
   display: block;
   font-weight: 500;
   font-size: 40px;
-  line-height: calc(47 / 40);
+  line-height: 1.17;
   text-align: left;
   letter-spacing: 0.02em;
 
@@ -178,7 +195,7 @@
     padding: 32px 0;
 
     font-size: 14px;
-    line-height: calc(16 / 14);
+    line-height: 1.14;
   }
   @media screen and (min-width: 1200px) {
     &:hover,
@@ -210,12 +227,12 @@
   font-weight: 500;
   letter-spacing: 0.02em;
 
-  line-height: (28 / 24);
+  line-height: 1.16;
   @media screen and (max-width: 767px) {
     font-size: 24px;
     &:last-child {
       font-size: 34px;
-      line-height: (40 / 34);
+      line-height: 1.17;
       margin-bottom: 32px;
       color: $acent-color;
     }
@@ -272,6 +289,7 @@
     display: flex;
     padding-left: 0;
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 .soc-med-list__item--text {

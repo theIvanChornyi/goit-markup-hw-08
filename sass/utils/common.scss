@@ -14,11 +14,24 @@ body {
   font-style: normal;
   font-weight: $text-weight;
   font-size: 14px;
-  line-height: (24 / 14);
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: $text-color;
 }
-
+main {
+  @media screen and (max-width: 767px) {
+    .header.is-open + & {
+      display: none;
+    }
+  }
+}
+footer {
+  @media screen and (max-width: 767px) {
+    .header.is-open ~ & {
+      display: none;
+    }
+  }
+}
 img {
   display: block;
   width: 100%;
@@ -45,6 +58,12 @@ img {
   padding: 0 15px;
   margin: 0 auto;
   min-width: 320px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
@@ -80,14 +99,14 @@ img {
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
-  line-height: (33 / 28);
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: $title-color;
   @media screen and (min-width: 1200px) {
     font-size: 36px;
-    line-height: calc(42 / 36);
+    line-height: 1.17;
   }
 }
 .soc-med-list {

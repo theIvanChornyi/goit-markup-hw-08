@@ -4,11 +4,11 @@
 }
 .hero__thumb {
   margin: 0 auto;
-  max-width: 1600px;
   min-height: 400px;
-  padding: 118px 0;
+  max-width: 480px;
+  min-width: 320px;
+  padding: 118px 15px;
   text-align: center;
-
   background-color: $bkg-hero;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,6 +31,7 @@
     }
   }
   @media screen and (min-width: 768px) {
+    max-width: 768px;
     background-image: radial-gradient(
         ellipse at center,
         rgba(47, 48, 58, 0.4),
@@ -53,6 +54,7 @@
     }
   }
   @media screen and (min-width: 1200px) {
+    max-width: 1600px;
     min-height: 600px;
     padding: 200px 0;
     background-image: radial-gradient(

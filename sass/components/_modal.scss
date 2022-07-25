@@ -23,16 +23,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  height: 609px;
   width: calc(100% - 30px);
   max-width: 450px;
-
   padding: 40px;
-
   background-color: $alternative-color;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media screen and (max-width: 479px) {
+    padding: calc(40px - (100% / 40));
+  }
   @media screen and (min-width: 1200px) {
     max-width: 528px;
   }
@@ -85,7 +87,7 @@
   margin-top: 10px;
 
   font-size: 12px;
-  line-height: calc(14 / 12);
+  line-height: 1.17;
   letter-spacing: 0.01em;
 }
 .data__name-caption {
@@ -129,6 +131,10 @@
   border-radius: 4px;
 
   resize: none;
+  @media screen and (max-width: 479px) {
+    min-height: none;
+    height: calc(120px - (100% / 120));
+  }
 
   &:hover,
   &:focus-within {
@@ -139,7 +145,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: calc(16 / 14);
+    line-height: 1.14;
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
@@ -154,8 +160,6 @@
     justify-content: center;
   }
 }
-.data__checkbox {
-}
 .data__check-ico {
   display: block;
   width: 16px;
@@ -163,6 +167,7 @@
   border: 2px solid #212121;
   border-radius: 4px;
   fill: #fff;
+  flex-shrink: 0;
   .data__checkbox:checked + & {
     background-color: $acent-color;
     border-color: $acent-color;
@@ -183,6 +188,10 @@
 .data__button {
   display: block;
   margin: 30px auto 0;
+  @media screen and (max-width: 479px) {
+    min-height: none;
+    margin-top: calc(30px - (100% / 30));
+  }
   @media screen and (min-width: 768px) {
     min-width: 200px;
   }

@@ -1,6 +1,7 @@
 @import '../utils/variables.scss';
 .clients {
   padding: 60px 0;
+  min-width: 320px;
   @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
@@ -27,6 +28,7 @@
   align-items: center;
 
   min-height: 92px;
+  min-width: 130px;
   width: calc((100vw - 60px) / 2);
 
   border: 1px solid $ico-color;
@@ -37,8 +39,11 @@
   &:focus {
     border-color: $acent-color;
   }
+  @media screen and (min-width: 480px) {
+    width: 210px;
+  }
   @media screen and (min-width: 768px) {
-    width: calc((100vw - 90px) / 3);
+    width: 226px;
   }
   @media screen and (min-width: 1200px) {
     width: 170px;

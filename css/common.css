@@ -13,9 +13,21 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.7142857143;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (max-width: 767px) {
+  .header.is-open + main {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header.is-open ~ footer {
+    display: none;
+  }
 }
 
 img {
@@ -46,6 +58,16 @@ img {
   padding: 0 15px;
   margin: 0 auto;
   min-width: 320px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -79,7 +101,7 @@ img {
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
-  line-height: 1.1785714286;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -87,7 +109,7 @@ img {
 @media screen and (min-width: 1200px) {
   .section-title {
     font-size: 36px;
-    line-height: 1.1666666667;
+    line-height: 1.17;
   }
 }
 
